@@ -8,7 +8,7 @@ WrongCat::WrongCat()
 
 WrongCat::WrongCat(const WrongCat & other) : WrongAnimal(other)
 {
-    
+    std::cout << "Constructor param WrongCat" << std::endl;
 }
 
 WrongCat& WrongCat::operator=(const WrongCat & other)

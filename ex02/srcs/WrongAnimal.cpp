@@ -7,7 +7,7 @@ WrongAnimal::WrongAnimal() : _type("WrongAnimal")
 
 WrongAnimal::WrongAnimal(const WrongAnimal & other) : _type(other._type)
 {
-    
+    std::cout << "Constructor param WrongAnimal" << std::endl;
 }
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal & other)

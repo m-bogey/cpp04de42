@@ -9,7 +9,7 @@ Cat::Cat()
 
 Cat::Cat(const Cat & other) : Animal(other), _br(new Brain(*other._br))
 {
-    
+    std::cout << "Constructor param Cat" << std::endl;
 }
 
 Cat& Cat::operator=(const Cat & other)

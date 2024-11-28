@@ -7,7 +7,7 @@ Animal::Animal() : _type("animal")
 
 Animal::Animal(const Animal & other) : _type(other._type)
 {
-    
+    std::cout << "Constructor param Animal" << std::endl;
 }
 
 Animal& Animal::operator=(const Animal & other)

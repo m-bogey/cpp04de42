@@ -9,7 +9,7 @@ Dog::Dog()
 
 Dog::Dog(const Dog & other) : Animal(other), _br(new Brain(*other._br))
 {
-    
+    std::cout << "Constructor param Dog" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog & other)
