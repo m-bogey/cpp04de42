@@ -15,8 +15,7 @@ AMateria::AMateria(const AMateria & other)
 }
 AMateria& AMateria::operator=(const AMateria & other)
 {
-    if (this != &other)
-        *this = other;
+    (void)other;
     return (*this);
 }
 AMateria::~AMateria()

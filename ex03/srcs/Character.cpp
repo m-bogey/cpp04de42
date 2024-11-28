@@ -15,15 +15,33 @@ Character::Character(std::string name) : _name(name)
         _material[i] = NULL;
 }
 
-Character::Character(const Character & other) : ICharacter(other)
+ Character::Character(const Character & other) : ICharacter(other)
 {
-    *_material = *other._material;
+    for (int i = 0; i < 4; i++)
+    {
+        if (other._material[i])
+        {
+            this->_material[i] = (other._material[i])->clone();
+        }
+        else
+            this->_material[i] = 0;
+    }
 }
 
 Character& Character::operator=(const Character & other)
 {
-    ICharacter::operator=(other);
-    *_material = *other._material;
+    if (this != &other)
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            if (this->_material[i])
+                delete this->_material[i];
+            if (other._material[i])
+                this->_material[i] =  (other._material[i])->clone();
+            else
+                this->_material[i] = 0;
+        }
+    }
     return (*this);
 }
 
